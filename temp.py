@@ -1,1 +1,1 @@
-int("sdas")
+print("succeed")
