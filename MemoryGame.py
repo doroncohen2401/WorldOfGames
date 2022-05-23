@@ -3,7 +3,6 @@ from time import sleep
 from numpy import array_equal
 from GuessGame import generate_number
 
-
 size_list = 2
 range_numbers = 101
 
@@ -47,6 +46,7 @@ def play(difficulty):
     print(list_generate)
     sleep(0.7)
     screen_clear()
+    print('\n' * 80)
     condition = is_list_equal(list_generate, get_list_from_user())
     if condition:
         print("you win in the guess game")
@@ -54,5 +54,3 @@ def play(difficulty):
     else:
         print("you lose in the guess game ")
         return False
-
-
