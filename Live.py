@@ -1,6 +1,7 @@
 import MemoryGame as MG
 import GuessGame as GG
 import CurrencyRouletteGame as CRG
+import Score
 
 
 def welcome(name):
@@ -43,8 +44,11 @@ def load_game():
     game_number = choose_game()
     difficult = choose_difficult()
     if game_number == 1:
-        MG.play(difficult)
+        win = MG.play(difficult)
     elif game_number == 2:
-        GG.play(difficult)
+        win = GG.play(difficult)
     elif game_number == 3:
-        CRG.play(difficult)
+        win = CRG.play(difficult)
+
+    if win:
+        Score.add_score(difficult)
